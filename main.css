@@ -1,0 +1,29 @@
+#corps{
+	background-color: #f5ce6b;
+	margin-right: 20%;
+	margin-left: 20%;
+	font-size: larger;
+	padding:10px;
+}
+a{
+	text-decoration: none;
+	color:#6be5f5;
+	background-color: #48a8b4;
+	height:40px;
+	width: 200px;
+	display:block;
+	text-align: center;
+	border-radius: 10px;
+	padding-top: 10px;
+}
+a:hover{
+	color:#48a8b4;
+	background-color: #6be5f5;
+}
+body{
+	background-image:url("images/vue.jpg");
+	background-attachment: fixed;
+}
+h1, h2 {
+	text-decoration: underline;
+}
