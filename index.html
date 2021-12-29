@@ -33,5 +33,39 @@
 	<h2>Aspects techniques</h2>
 		<a href="turbine.html"> Turbine</a>
 		</div>
+
+
+<form name="eMailer">
+<table width="250" border="0" cellpadding="0" cellspacing="0" bgcolor="#888888">
+<tr><td align="center">
+<font face="Verdana" size="1" color="#ffffff">Envoyer cette page à un ami</font>
+<input type="text" name="address" size="25" value="son email">
+<input type="button" value="Go" onClick="mailThisUrl();">
+</form>
+
+<script language="JavaScript1.2">
+//traduction www.outils-web.com
+var good;
+function checkEmailAddress(field) {
+var goodEmail = field.value.match(/\b(^(\S+@).+((\.com)|(\.net)|(\.edu)|(\.mil)|(\.gov)|(\.org)|(\..{2,2}))$)\b/gi);
+if (goodEmail){ good = true
+} else { alert('Entrez une adresse mail valide')
+field.focus()
+field.select()
+good = false
+}}
+u = window.location;
+m = "Je pense que cela devrait t' intéresser";
+function mailThisUrl(){
+good = false
+checkEmailAddress(document.eMailer.address)
+if (good){
+mess="mailto:"+document.eMailer.address.value+"?subject="+m+"&body="+document.title+" "+u;
+window.location = mess
+   }
+}
+</script>
+</td></tr></table>
+
 </body>
 </html>
